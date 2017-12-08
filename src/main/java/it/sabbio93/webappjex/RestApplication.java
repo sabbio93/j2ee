@@ -1,4 +1,4 @@
-package swarmWillyEJB;
+package main.java.it.sabbio93.webappjex;
 
 import javax.ws.rs.core.Application;
 import javax.ws.rs.ApplicationPath;

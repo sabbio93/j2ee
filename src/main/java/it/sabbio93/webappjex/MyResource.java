@@ -1,5 +1,4 @@
-
-package it.sabbio93.webappjex;
+package main.java.it.sabbio93.webappjex;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

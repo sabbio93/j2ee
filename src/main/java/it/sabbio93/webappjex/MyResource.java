@@ -13,6 +13,10 @@ public class MyResource {
     @Produces("text/plain")
     public String getIt() {
     	Man a = new Man();
+    	System.out.println("creo uomo");
+    	a.setSurname("manic");
+    	a.setAge(11);
+    	a.setName("mario");
         return "Hi there!";
     }
 }

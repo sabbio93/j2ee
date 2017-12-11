@@ -1,40 +1,39 @@
 package main.java.it.sabbio93.webappjex;
 
 import java.io.Serializable;
-import java.lang.String;
 import javax.persistence.*;
 
+
 /**
- * Entity implementation class for Entity: Man
- *
+ * The persistent class for the Man database table.
+ * 
  */
 @Entity
+@NamedQuery(name="Man.findAll", query="SELECT m FROM Man m")
 public class Man implements Serializable {
-
-	
-	private String Name;   
-	@Id
-	private String Surname;
-	private int age;
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="Surname")
+	private String surname;
+
+	private int age;
+
+	@Column(name="Name")
+	private String name;
+
 	public Man() {
-		super();
-	}   
-	public String getName() {
-		return this.Name;
 	}
 
-	public void setName(String Name) {
-		this.Name = Name;
-	}   
 	public String getSurname() {
-		return this.Surname;
+		return this.surname;
 	}
 
-	public void setSurname(String Surname) {
-		this.Surname = Surname;
-	}   
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+
 	public int getAge() {
 		return this.age;
 	}
@@ -42,5 +41,13 @@ public class Man implements Serializable {
 	public void setAge(int age) {
 		this.age = age;
 	}
-   
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 }
